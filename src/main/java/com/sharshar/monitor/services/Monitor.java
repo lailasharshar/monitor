@@ -46,6 +46,7 @@ public class Monitor {
 				lastSuccess = now;
 				if (inError) {
 					logger.info("We're back up");
+					notificationService.textMe("We're back up", "No more error");
 				}
 				inError = false;
 			} else {
